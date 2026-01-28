@@ -21,5 +21,11 @@ pipeline{
         sh 'mvn clean package'
       }
     }
+
+    stage('Deploy'){
+      steps{
+        sh 'docker build -t rajh20/first-maven:latest'
+      }
+    }
   }
 }
