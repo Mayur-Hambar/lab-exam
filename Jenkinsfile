@@ -1,12 +1,12 @@
 pipeline{
   agent any
 
-  trigger{
-    build('* * * * *')
+  triggers {
+    cron('* * * * *')
   }
 
-  stages{ steps{
-    stage('Checkout'){
+  stages{ 
+    stage('Checkout'){ steps{
       git branch: 'main', url: 'https://github.com/Mayur-Hambar/lab-exam/' }
     }
 
