@@ -5,9 +5,9 @@ pipeline{
     build('* * * * *')
   }
 
-  stages{
+  stages{ steps{
     stage('Checkout'){
-      git branch: 'main', url: 'https://github.com/Mayur-Hambar/lab-exam/'
+      git branch: 'main', url: 'https://github.com/Mayur-Hambar/lab-exam/' }
     }
 
     stage('Maven Test'){
