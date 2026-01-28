@@ -22,10 +22,10 @@ pipeline{
       }
     }
 
-    stage('Deploy'){
-      steps{
-        sh 'docker build -t rajh20/first-maven:latest'
-      }
-    }
+    stage('Maven Run') {
+            steps {
+                sh 'java -cp target/simple-maven-1.0-SNAPSHOT.jar com.example.App'
+            }
+        }
   }
 }
